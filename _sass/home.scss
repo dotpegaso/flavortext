@@ -20,8 +20,9 @@
         font-size: 5vw;
         position: relative;
         opacity: 0;
-        animation: fadein 1s forwards;
+        animation: fadein 1s ease forwards;
         animation-delay: 2s;
+        text-transform: capitalize;
         
         &::before{
             content: '—';
@@ -40,22 +41,62 @@
         padding-right: 20vw;
         font-style: italic;
         opacity: 0;
-        animation: fadein 1s forwards;
+        animation: fadeinUp 1s ease forwards;
         animation-delay: 2.5s;
     }
     
-    .card{
+    .preview{
         position: absolute;
         right: 10vw;
         bottom: -100px;
         transition-duration: .2s;
-        border-radius: 10px;
         opacity: 0;
-        animation: fadeinUp 1s forwards;
+        animation: fadeinUp 1s ease forwards;
         animation-delay: 3.5s;
         
         &:hover{
             bottom: 5px;
+            
+            p{ opacity: 0; transition-duration: .5s; }
+        }
+        
+        .card{ border-radius: 10px; }
+        
+        p{
+            font-family: $btn;
+            font-size: .8em;
+            pointer-events: none;
+            transition-duration: .5s;
+            
+            &:first-of-type{
+                position: absolute;
+                width: 130px;
+                left: 230px;
+                bottom: 130px;
+                
+                &:before{
+                    content: 'set';
+                    font-size: 0.7em;
+                    position: absolute;
+                    top: -10px;
+                    left: 0;
+                }
+            }
+            
+            &:last-of-type{
+                position: absolute;
+                top: 120px;
+                right: 230px;
+                text-align: right;
+                
+                &:before{
+                    content: 'artist';
+                    font-size: 0.7em;
+                    position: absolute;
+                    top: -10px;
+                    right: 0;
+                }
+            }
         }
     }
     
@@ -64,7 +105,7 @@
         align-content: center;
         align-items: center;
         justify-content: space-evenly;
-        border: 2px solid;
+        border: none;
         padding: 10px;
         font-size: 1vw;
         border-radius: 16px;
@@ -77,7 +118,7 @@
         bottom: 3vw;
         font-family: $btn;
         opacity: 0;
-        animation: fadeinUp 1s forwards;
+        animation: fadeinUp 1s ease forwards;
         animation-delay: 4.5s;
         
         img{
