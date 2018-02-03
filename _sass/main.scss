@@ -1,0 +1,55 @@
+*{ margin: 0; cursor: default; outline: none;}
+
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    transition-duration: .2s;
+    background-image: url("/res/backgrounds/hydra.jpg");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    animation: color-fade 9s infinite;
+}
+
+@font-face{
+    font-family: 'mtg';
+    src: url('/fonts/magic.ttf');
+}
+
+@keyframes color-fade {
+    0%{ background-color: #bb54d7; }
+    25%{ background-color: #b050db; }
+    50%{ background-color: #7035e6; }
+    75%{ background-color: #4f29f7; }
+    100%{ background-color: #bb54d7; }
+}
+
+@keyframes fadein {
+    0%{ 
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100%{ 
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes fadeinUp {
+    0%{ 
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100%{ 
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+$btn: 'Lato', sans-serif; 
+$heading: 'mtg';
+$body: 'Merriweather', serif;
+
+@import 'home.scss';
