@@ -15,13 +15,30 @@
         width: 100%;
     }
     
+    .intro{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .quote{
+            font-size: 1.5vw;
+            font-family: $btn;
+            width: initial;
+            animation: fadeInOut 4s ease forwards;
+        }
+    }
+    
     .name{
         font-family: $heading;
         font-size: 5vw;
         position: relative;
         opacity: 0;
         animation: fadein 1s ease forwards;
-        animation-delay: 2s;
+        animation-delay: 4.3s;
         text-transform: capitalize;
         
         &::before{
@@ -42,7 +59,7 @@
         font-style: italic;
         opacity: 0;
         animation: fadeinUp 1s ease forwards;
-        animation-delay: 2.5s;
+        animation-delay: 5s;
     }
     
     .preview{
@@ -52,7 +69,7 @@
         transition-duration: .2s;
         opacity: 0;
         animation: fadeinUp 1s ease forwards;
-        animation-delay: 3.5s;
+        animation-delay: 5.5s;
         
         &:hover{
             bottom: 5px;
@@ -119,10 +136,11 @@
         font-family: $btn;
         opacity: 0;
         animation: fadeinUp 1s ease forwards;
-        animation-delay: 4.5s;
+        animation-delay: 6s;
         
         img{
             width: 25px;
+            pointer-events: none;
         }
         
         &:hover{
