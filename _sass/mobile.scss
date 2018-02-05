@@ -4,6 +4,7 @@
         align-content: flex-start;
         height: calc(100% - 10vw);
         overflow-y: scroll;
+        overflow-x: hidden;
         
         .intro{
             .quote{font-size: 4.5vw;}
@@ -13,10 +14,15 @@
             
             &:before{
                 left: -5px;
+                bottom: -4vw;
             }
         }
         
-        .flavor{ padding-right: 0; }
+        .flavor{ 
+            padding-right: 0; 
+            font-size: 5vw !important;
+            margin-top: 20px;
+        }
         
         .preview{ 
             position: relative;
@@ -24,30 +30,24 @@
             bottom: 0;
             display: block;
             margin: 30px auto;
-            
+            pointer-events: none;
             
             p{
                 &:first-of-type{
-                    width: 20vw;
+                    width: 17vw;
                 }
                 
                 &:last-of-type{
-                    width: 18vw;
+                    width: 17vw;
                 }
             }
         }
         
         .share{ 
             font-size: 4.5vw;
-            position: relative;
-            left: 0;
-            bottom: 0;
-            display: inline-block;
-            width: 40vw;
         }
         .donate{ 
-            width: 100%;
-            left: 0;
+            left: 35vw;
         }
     }
 }
