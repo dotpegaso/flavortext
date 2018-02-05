@@ -1,7 +1,12 @@
 <div id="home">
-    <div class="intro">
-        <p class="quote">{{ quote }}</p>
+    
+    <div class="search">
+        <form method="get" action="https://www.google.com/search">
+            <img src="/res/search.svg" alt="">
+            <input type="text" name="q" placeholder="Google search" value="">
+        </form>
     </div>
+    
     <p class="name">{{ name }}</p>
     <p class="flavor">{{ flavor }}</p>
     
@@ -26,7 +31,3 @@
     </form>
     
 </div>
-
-<script>
-    window.scrollTo(0,1);
-</script>

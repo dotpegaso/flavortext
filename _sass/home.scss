@@ -15,20 +15,30 @@
         width: 100%;
     }
     
-    .intro{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .search{
         
-        .quote{
-            font-size: 1.5vw;
-            font-family: $btn;
-            width: initial;
-            animation: fadeInOut 4s ease forwards;
+        form{
+            position: absolute;
+            top: 4vw;
+            right: 4vw;
+            display: flex;
+            align-items: center;
+            
+            img{
+                width: 20px;
+                margin-right: 15px;
+                pointer-events: none;
+            }
+            
+             input{
+                border: none;
+                border-bottom: 2px solid #FFF;
+                background: transparent;
+                padding: 5px;
+                font-size: 1em;
+                color: #FFF;
+                cursor: text;
+            }
         }
     }
     
@@ -38,7 +48,7 @@
         position: relative;
         opacity: 0;
         animation: fadein 1s ease forwards;
-        animation-delay: 4.3s;
+        animation-delay: 2s;
         text-transform: capitalize;
         
         &::before{
@@ -59,7 +69,7 @@
         font-style: italic;
         opacity: 0;
         animation: fadeinUp 1s ease forwards;
-        animation-delay: 5s;
+        animation-delay: 2.5s;
     }
     
     .preview{
@@ -69,12 +79,12 @@
         transition-duration: .2s;
         opacity: 0;
         animation: fadeinUp 1s ease forwards;
-        animation-delay: 5.5s;
+        animation-delay: 3s;
         
         &:hover{
             bottom: 5px;
             
-            p{ opacity: 0; transition-duration: .5s; }
+            p{ opacity: 0; transition-duration: .3s; }
         }
         
         .card{ border-radius: 10px; }
@@ -136,7 +146,7 @@
         font-family: $btn;
         opacity: 0;
         animation: fadeinUp 1s ease forwards;
-        animation-delay: 6s;
+        animation-delay: 3.5s;
         
         img{
             width: 25px;
@@ -161,11 +171,14 @@
 }
 
 @media screen and (max-width: 490px){
-        .name{
-            font-size: 10vw !important;
-        }
-        
-        .flavor{
-            font-size: 8vw !important;
-        }
+    
+    .search{ display: none; }
+    
+    .name{
+        font-size: 10vw !important;
     }
+    
+    .flavor{
+        font-size: 8vw !important;
+    }
+}
