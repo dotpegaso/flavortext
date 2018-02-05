@@ -31,6 +31,7 @@
             display: block;
             margin: 30px auto;
             pointer-events: none;
+            margin-bottom: 50px;
             
             p{
                 &:first-of-type{
@@ -45,6 +46,7 @@
         
         .share{ 
             font-size: 4.5vw;
+            bottom: -1vw;
         }
         .donate{ 
             left: 35vw;
