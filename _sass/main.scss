@@ -12,6 +12,13 @@ body{
     animation: color-fade 9s infinite;
 }
 
+@media screen and (max-width: 490px){
+    body{
+        background-image: url("/res/backgrounds/mobile_hydra.png");
+        background-position: fixed;
+    }
+}
+
 @font-face{
     font-family: 'mtg';
     src: url('/fonts/magic.ttf');
@@ -65,3 +72,4 @@ $heading: 'mtg';
 $body: 'Merriweather', serif;
 
 @import 'home.scss';
+@import 'mobile.scss';

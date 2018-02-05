@@ -1,0 +1,53 @@
+@media screen and (max-width: 490px){
+    #home{
+        padding: 5vw;
+        align-content: flex-start;
+        height: calc(100% - 10vw);
+        overflow-y: scroll;
+        
+        .intro{
+            .quote{font-size: 4.5vw;}
+        }
+        
+        .name{
+            
+            &:before{
+                left: -5px;
+            }
+        }
+        
+        .flavor{ padding-right: 0; }
+        
+        .preview{ 
+            position: relative;
+            right: 0;
+            bottom: 0;
+            display: block;
+            margin: 30px auto;
+            
+            
+            p{
+                &:first-of-type{
+                    width: 20vw;
+                }
+                
+                &:last-of-type{
+                    width: 18vw;
+                }
+            }
+        }
+        
+        .share{ 
+            font-size: 4.5vw;
+            position: relative;
+            left: 0;
+            bottom: 0;
+            display: inline-block;
+            width: 40vw;
+        }
+        .donate{ 
+            width: 100%;
+            left: 0;
+        }
+    }
+}
