@@ -5,7 +5,7 @@ body{
     height: 100vh;
     overflow: hidden;
     transition-duration: .2s;
-    background-image: url("/res/backgrounds/hydra.jpg");
+    background-image: url("../res/hydra.png");
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
@@ -14,7 +14,7 @@ body{
 
 @media screen and (max-width: 490px){
     body{
-        background-image: url("/res/backgrounds/mobile_hydra.png");
+        background-image: url("../res/mobile_hydra.png");
         background-position: fixed;
     }
 }

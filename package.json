@@ -1,39 +1,28 @@
 {
-  "name": "angularjs-boilerplate",
-  "version": "1.0.0",
-  "description": "a template for angularjs fast build",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dotpegaso/angularjs-boilerplate.git"
-  },
-  "keywords": [
-    "angularjs",
-    "boilerplate",
-    "sass"
-  ],
-  "author": "dotpegaso",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dotpegaso/angularjs-boilerplate/issues"
-  },
-  "homepage": "https://github.com/dotpegaso/angularjs-boilerplate#readme",
-  "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-cli": "^1.4.0",
-    "gulp-cssmin": "^0.2.0",
-    "gulp-imagemin": "^3.4.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-wait": "0.0.2",
-    "gulp-webserver": "^0.9.1"
-  },
+  "name": "flavortexts",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "mtgsdk": "^0.3.0"
-  }
+    "css-loader": "^2.1.0",
+    "mtgsdk": "^0.4.2",
+    "node-sass": "^4.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "2.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

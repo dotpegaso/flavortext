@@ -2,9 +2,10 @@
     #home{
         padding: 5vw;
         align-content: flex-start;
-        height: calc(100% - 10vw);
         overflow-y: scroll;
         overflow-x: hidden;
+        align-items: center;
+        align-content: center;
         
         .intro{
             .quote{font-size: 4.5vw;}
@@ -46,7 +47,6 @@
         
         .share{ 
             font-size: 4.5vw;
-            bottom: -1vw;
         }
         .donate{ 
             left: 35vw;
