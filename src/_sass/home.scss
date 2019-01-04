@@ -48,7 +48,7 @@
         position: relative;
         opacity: 0;
         animation: fadein 1s ease forwards;
-        animation-delay: .8s;
+        animation-delay: 1.3s;
         text-transform: capitalize;
         
         &::before{
@@ -69,7 +69,7 @@
         font-style: italic;
         opacity: 0;
         animation: fadeinUp 1s ease forwards;
-        animation-delay: 1s;
+        animation-delay: 1.6s;
     }
     
     .preview{
@@ -79,7 +79,7 @@
         transition-duration: .2s;
         opacity: 0;
         animation: fadeinUp 1s ease forwards;
-        animation-delay: 1.5s;
+        animation-delay: 2s;
         
         &:hover{
             bottom: 5px;
@@ -146,7 +146,7 @@
         font-family: $btn;
         opacity: 0;
         animation: fadeinUp 1s ease forwards;
-        animation-delay: 2s;
+        animation-delay: 1.8s;
         
         img{
             width: 25px;
