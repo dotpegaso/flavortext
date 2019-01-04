@@ -5,7 +5,7 @@ body{
     height: 100vh;
     overflow: hidden;
     transition-duration: .2s;
-    background-image: url("../res/hydra.png");
+    background-image: url("../res/hydra.jpg");
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
@@ -14,14 +14,14 @@ body{
 
 @media screen and (max-width: 490px){
     body{
-        background-image: url("../res/mobile_hydra.png");
+        background-image: url("../res/mobile_hydra.jpg");
         background-position: fixed;
     }
 }
 
 @font-face{
     font-family: 'mtg';
-    src: url('/fonts/magic.ttf');
+    src: url('../fonts/magic.ttf');
 }
 
 @keyframes color-fade {
