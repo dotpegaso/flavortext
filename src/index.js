@@ -11,9 +11,10 @@ class Mtg extends Component{
     state = { card: [] };
 
     componentWillMount(){
+        
         mtg.card.where({
             pageSize: 1,
-            flavor: true,
+            flavor: 'a|e|i|o|u',
             random: true
         }).then(
             api_card => this.setState({card : api_card[0]})
