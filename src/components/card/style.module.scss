@@ -1,0 +1,149 @@
+@import '../../_sass/variables.scss';
+@import '../../_sass/mixins.scss';
+
+.cardContainer{
+    display: flex;
+
+    @include mobile{
+        flex-wrap: wrap;
+    }
+
+    .image{
+        display: flex;
+        position: relative;
+
+        @include mobile{
+            order: 1;
+            width: 100%;
+            margin: 50px 0;
+        }
+
+        .card{
+            height: 460px;
+            border-radius: 20px;
+            margin-right: 50px;
+
+            @include mobile{
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        .refresh{
+            position: absolute;
+            width: 50px;
+            bottom: 0;
+            left: 45%;
+            transform: translate(-50%, 50%);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+
+            @include mobile{
+                left: 50%;
+            }
+
+            img{ 
+                pointer-events: none; 
+                box-shadow: 0 8px 10px rgba(0,0,0, .5); 
+                border-radius: 50%; 
+            }
+        }
+    }
+
+    .info{
+        width: 45vw;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+
+        @include mobile{
+            width: 100%;
+            padding: 25px 25px 0;
+        }
+
+        .name, .flavor{
+            width: 100%;
+            color: $text-color;
+        }
+
+        .name{
+            font-family: $primary-font;
+            font-size: 4vw;
+            position: relative;
+
+            @include mobile{
+                font-size: 8vw;
+            }
+
+            &:before{
+                content: "\2014";
+                font-size: 5vw;
+                color: $text-color;
+                position: absolute;
+                bottom: -55px;
+                left: -15px;
+
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+        .flavor{
+            font-family: $secondary-font;
+            font-size: 1.5vw;
+            margin-top: 30px;
+            line-height: 1.35;
+
+            @include mobile{
+                font-size: 4.5vw;
+            }
+        }
+
+        .common{
+            margin-right: 15px;
+            color: $text-color;
+            font-family: $bold-font;
+
+            span{ 
+                font-family: $light-font; 
+            }
+        }
+
+        .details{
+            width: 100%;
+            margin-top: 40px;
+            display: flex;
+        }
+
+        .stores{
+            margin-top: 40px;
+            font-family: $bold-font;
+            color: $text-color;
+            width: 100%;
+
+            .common{ 
+                font-family: $light-font;
+                display: inline;
+                margin-right: 15px;
+            }
+
+            a{ 
+                text-decoration: none; 
+                color: $text-color;
+                
+                &:hover{
+                    text-decoration: underline; 
+                    cursor: pointer;
+                }
+
+                &:not(:last-of-type){
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

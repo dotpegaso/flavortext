@@ -1,60 +1,19 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import mtg from 'mtgsdk';
-import './_sass/index.scss';
-import * as serviceWorker from './serviceWorker';
-import svgTwitter from './res/twitter.svg';
-import svgSearch from './res/search.svg';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './_sass/index.scss'
 
-class Mtg extends Component{
+import { Provider } from 'react-redux'
+import { watcherSaga } from './_redux/sagas'
 
-    state = { card: [] };
+import {sagaMiddleware, store} from './_redux/store'
+import Card from './components/card'
 
-    componentWillMount(){
-        
-        mtg.card.where({
-            pageSize: 1,
-            flavor: 'a|e|i|o|u',
-            random: true
-        }).then(
-            api_card => this.setState({card : api_card[0]})
-        );
-    }
-    
-    render(){
-        let { card } = this.state;
+//run the saga
+sagaMiddleware.run(watcherSaga)
 
-        return(
-            <section id="home">
-    
-                <div className="search">
-                    <form method="get" action="https://www.google.com/search">
-                        <img src={svgSearch} alt="Search" />
-                        <input type="text" name="q" placeholder="Google search" />
-                    </form>
-                </div>
-                
-                <p className="name">{card.name}</p>
-                <p className="flavor">{card.flavor}</p>
-                
-                <div className="preview">
-                    <p>{card.setName}</p>
-                    <p>{card.artist}</p>
-                    <img className="card" src={card.imageUrl} alt={`${card.name}, a Magic the Gathering's card`} />
-                </div>
-                
-                <a 
-                className="share" 
-                href={`https://twitter.com/intent/tweet?text=${card.flavor}%20👉%20flavortexts.com`}
-                target="_blank" rel="noopener noreferrer">
-                    <img src={svgTwitter} alt="twitter icon"/>
-                    Share
-                </a>
-                
-            </section>
-        )
-    }
-}
-
-ReactDOM.render(<Mtg />, document.getElementById('root'));
-serviceWorker.register();
+ReactDOM.render(
+    <Provider store={store}>
+        <Card />
+    </Provider>,
+    document.getElementById('root')
+);
