@@ -46,7 +46,7 @@ const Card = ({card, fetching, error, onRequestCard}) => {
 
                     <a href={`https://www.hareruyamtg.com/en/products/search?product=${card.name}`} target="_blank" rel="noopener noreferrer">Japan</a>
 
-                    <a href={`http://www.starcitygames.com/results?&name=${card.name}&display=3&switch_display=1`} target="_blank" rel="noopener noreferrer">USA</a>
+                    <a href={`https://starcitygames.com/search.php?search_query=${card.name}`} target="_blank" rel="noopener noreferrer">USA</a>
 
                     <a href={`https://www.cardmarket.com/en/Magic/Products/Search?searchString=${card.name}&mode=gallery`} target="_blank" rel="noopener noreferrer">UK</a>
 
